@@ -42,8 +42,12 @@ body {
     cursor: pointer;
 }
 
-[name="compass-outline"], [name="heart-outline"], [name="person-outline"] {
+[name="compass-outline"], [name="heart-outline"], [name="person-outline"], [name="heart"] {
     display: none;
+}
+
+[name="heart"] {
+    color: red;
 }
 
 .top-bar input {
@@ -182,7 +186,7 @@ body {
     cursor: pointer;
 }
 
-.icons-post [name="heart-outline"] {
+.icons-post [name="heart-outline"], [name="heart"] {
     display: flex;
     margin-left: 17.81px;
 }
@@ -196,10 +200,6 @@ body {
 }
 
 [name="bookmark-outline"] {
-    margin-left: auto;
-    margin-right: 17.63px;
-}
-[name="bookmark"] {
     margin-left: auto;
     margin-right: 17.63px;
 }
@@ -259,7 +259,7 @@ body {
     display: flex;
 }
 
-.bottom-bar [name="heart-outline"] {
+.bottom-bar [name="heart-outline"], .bottom-bar [name="heart"] {
     display: flex;
 }
 
@@ -357,7 +357,7 @@ body {
         margin-right: 19px;
     }
 
-    .top-bar [name="heart-outline"] {
+    .top-bar [name="heart-outline"], .top-bar [name="heart"] {
         display: flex;
         margin-right: 19px;
     }
@@ -476,6 +476,7 @@ body {
     .mt10 {
         margin-top: 10px;
     }
+
     .mb {
         margin-bottom: 250px;
     }

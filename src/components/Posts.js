@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Posts() {
-    
+
     const posts = [
         {
             name: "Loki.Oficial",
@@ -69,6 +69,13 @@ export default function Posts() {
 function CardPost(props) {
 
     const [salvar, setSalvar] = React.useState("bookmark-outline")
+    const [like, setLike] = React.useState("heart-outline")
+    const [curtidas, setLikes] = React.useState(props.likes)
+    const [cor, setCor] = React.useState('black')
+
+    function Like() {
+        
+    } 
 
     return (
         <>
@@ -98,7 +105,7 @@ function CardPost(props) {
 
                 <div class="down-post">
                     <div class="icons-post">
-                        <ion-icon data-test="like-post" name="heart-outline"></ion-icon>
+                        <ion-icon data-test="like-post" onDoubleClick={() => like === "heart-outline" ? setLike("heart") : setLike("heart-outline")} name={like}></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                         <ion-icon data-test="save-post" onClick={() => salvar === "bookmark-outline" ? setSalvar("bookmark") : setSalvar("bookmark-outline")} name={salvar}></ion-icon>
