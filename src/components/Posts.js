@@ -96,10 +96,6 @@ function CardPost(props) {
                                 setLike("heart")
                                 setLikes(curtidas + 1)
                             }
-                            else {
-                                setLike("heart-outline")
-                                setLikes(curtidas - 1)
-                            }
                         }}
                             src={`./assets/${props.postContent}.jpg`} alt="" />
                     }

@@ -204,6 +204,11 @@ body {
     margin-right: 17.63px;
 }
 
+[name="bookmark-outline"]
+{
+    color: black;
+}
+
 [name="bookmark"]
 {
     color: #262626;
