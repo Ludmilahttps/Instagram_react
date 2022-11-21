@@ -33,12 +33,12 @@ Neste mini projeto vocês devem transformar o projeto entregue num projeto React
         - O usuário acima das sugestões (este não é um array, mas os dados devem vir de props)
                 
 - Dados Dinâmicos
-    - [ ]  O projeto também deverá ter alguns dados dinâmicos que irão mudar na tela. São eles:
+    - [x]  O projeto também deverá ter alguns dados dinâmicos que irão mudar na tela. São eles:
         - [x]  Nome de usuário (ao apertar o lápis, aparece um prompt para alterá-lo)
             - O texto que deve ser mudado é apenas o que aparece ao lado do lápis!   
         - [x]  Imagem de perfil (ao clicar uma vez na imagem, aparece um prompt pedindo novo link)
-        - [ ]  Salvar o post (ao clicar no ícone de salvar o post, ele deverá ficar preenchido)
-        - [ ]  Like no post
+        - [x]  Salvar o post (ao clicar no ícone de salvar o post, ele deverá ficar preenchido)
+        - [x]  Like no post
             - Ao clicar no ícone do like o usuário poderá curtir a postagem, caso a postagem já esteja curtida ao clicar no ícone a postagem não deve ficar curtida.
             - Ao clicar na imagem de um post do feed, o usuário poderá curtir a postagem, ou seja, o botão do like deverá ficar preenchido em vermelho
                 - OBS: assim como no Instagram real, clicar na imagem **NÃO** retira likes, apenas adiciona caso já não tenha

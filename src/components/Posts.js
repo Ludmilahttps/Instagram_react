@@ -10,7 +10,7 @@ export default function Posts() {
             postContent: "loki_post",
             footerLikeImg: "loki2",
             footerLikeName: "Loki_Sylvie",
-            footerLikeNumber: "101.523",
+            footerLikeNumber: '101',
             footerCommentProfile: "Não"
         },
         {
@@ -20,7 +20,7 @@ export default function Posts() {
             postContent: "Guardioes",
             footerLikeImg: "2",
             footerLikeName: "Rocket",
-            footerLikeNumber: "120.568",
+            footerLikeNumber: "168",
             footerCommentProfile: "Sim"
         },
         {
@@ -30,7 +30,7 @@ export default function Posts() {
             postContent: "tony",
             footerLikeImg: "badvibes",
             footerLikeName: "bad.vibes.memes",
-            footerLikeNumber: "125.568",
+            footerLikeNumber: "12568",
             footerCommentProfile: "Não"
         },
         {
@@ -50,7 +50,7 @@ export default function Posts() {
             postContent: "Guardioes",
             footerLikeImg: "2",
             footerLikeName: "Rocket",
-            footerLikeNumber: "120.568",
+            footerLikeNumber: "120568",
             footerCommentProfile: "Não"
         },
     ];
@@ -70,12 +70,7 @@ function CardPost(props) {
 
     const [salvar, setSalvar] = React.useState("bookmark-outline")
     const [like, setLike] = React.useState("heart-outline")
-    const [curtidas, setLikes] = React.useState(props.likes)
-    const [cor, setCor] = React.useState('black')
-
-    function Like() {
-        
-    } 
+    const [curtidas, setLikes] = React.useState(props.footerLikeNumber)
 
     return (
         <>
@@ -90,22 +85,40 @@ function CardPost(props) {
 
                 <div data-test="post-image" class="img-post">
                     {props.class === "video" ?
-
                         <video width="100%" controls="controls" autoplay="autoplay" muted="muted">
                             <source src="./assets/video.mp4" type="video/mp4" />
                             <source src="./assets/video.ogv" type="video/ogg" />
                             Seu navegador não suporta a tag de vídeo.
                         </video>
-
                         :
-
-                        <img src={`./assets/${props.postContent}.jpg`} alt="" />
+                        <img onDoubleClick={() => {
+                            if (like == "heart-outline") {
+                                setLike("heart")
+                                setLikes(curtidas + 1)
+                            }
+                            else {
+                                setLike("heart-outline")
+                                setLikes(curtidas - 1)
+                            }
+                        }}
+                            src={`./assets/${props.postContent}.jpg`} alt="" />
                     }
                 </div>
 
                 <div class="down-post">
                     <div class="icons-post">
-                        <ion-icon data-test="like-post" onDoubleClick={() => like === "heart-outline" ? setLike("heart") : setLike("heart-outline")} name={like}></ion-icon>
+                        <ion-icon data-test="like-post" onClick={() => {
+                            if (like == "heart-outline") {
+                                setLike("heart")
+                                setLikes(curtidas + 1)
+                            }
+
+                            else {
+                                setLike("heart-outline")
+                                setLikes(curtidas - 1)
+                            }
+
+                        }} name={like}></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                         <ion-icon data-test="save-post" onClick={() => salvar === "bookmark-outline" ? setSalvar("bookmark") : setSalvar("bookmark-outline")} name={salvar}></ion-icon>
@@ -114,7 +127,7 @@ function CardPost(props) {
                         <div class="img-like">
                             <img src={`./assets/${props.footerLikeImg}.jpg`} alt="" />
                         </div>
-                        <p>Curtido por <b>{props.footerLikeName}</b> e outras <b data-test="likes-number"> {props.footerLikeNumber} </b>pessoas</p>
+                        <p>Curtido por <b>{props.footerLikeName}</b> e outras <b data-test="likes-number"> {curtidas} </b>pessoas</p>
                     </div>
                 </div>
 
