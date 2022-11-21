@@ -473,12 +473,9 @@ body {
         background-color: transparent;
         border: none;
         font-weight: bold;
-        color: #B2DFFC;
         font-size: 14px;
-    }
-    .btn:hover {
         color: #0095F6;
-        transition-delay: 300ms;
+        cursor: pointer;
     }
     .mt6 {
         margin-top: 6px;

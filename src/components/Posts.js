@@ -24,33 +24,23 @@ export default function Posts() {
             footerCommentProfile: "Sim"
         },
         {
-            name: "razoesparaacreditar",
-            logo: "razoesparaacreditar",
+            name: "Tony_Stark",
+            logo: "tony",
             class: "post",
-            postContent: "tony",
-            footerLikeImg: "badvibes",
-            footerLikeName: "bad.vibes.memes",
+            postContent: "tony_post",
+            footerLikeImg: "thor",
+            footerLikeName: "Thor",
             footerLikeNumber: '125,68',
             footerCommentProfile: "Não"
         },
         {
-            name: "Gamora",
-            logo: "1",
+            name: "Dr. Strange",
+            logo: "strange",
             class: "post",
-            postContent: "Guardioes",
+            postContent: "strange",
             footerLikeImg: "2",
             footerLikeName: "Rocket",
             footerLikeNumber: '12',
-            footerCommentProfile: "Não"
-        },
-        {
-            name: "Gamora",
-            logo: "1",
-            class: "post",
-            postContent: "Guardioes",
-            footerLikeImg: "2",
-            footerLikeName: "Rocket",
-            footerLikeNumber: "199",
             footerCommentProfile: "Não"
         },
     ];
@@ -84,21 +74,14 @@ function CardPost(props) {
                 </div>
 
                 <div data-test="post-image" class="img-post">
-                    {props.class === "video" ?
-                        <video width="100%" controls="controls" autoplay="autoplay" muted="muted">
-                            <source src="./assets/video.mp4" type="video/mp4" />
-                            <source src="./assets/video.ogv" type="video/ogg" />
-                            Seu navegador não suporta a tag de vídeo.
-                        </video>
-                        :
-                        <img onDoubleClick={() => {
-                            if (like == "heart-outline") {
-                                setLike("heart")
-                                setLikes(curtidas + 1)
-                            }
-                        }}
-                            src={`./assets/${props.postContent}.jpg`} alt="" />
-                    }
+                    <img onDoubleClick={() => {
+                        if (like == "heart-outline") {
+                            setLike("heart")
+                            setLikes(curtidas + 1)
+                        }
+                    }}
+                        src={`./assets/${props.postContent}.jpg`} alt="" />
+
                 </div>
 
                 <div class="down-post">
@@ -131,20 +114,20 @@ function CardPost(props) {
                     <div class="footer-add-comment">
                         <div class="footer-comment-profile">
                             <div class="comment-content">
-                                <span class="footer-comment-name">netflixbrasil</span> <span class="footer-comment">Deixem aqui</span>
+                                <span class="footer-comment-name">{props.name}</span> <span class="footer-comment">Segura essa</span>
                                 <div class="see-all-comments mt6">
                                     <span>Ver todos os 194 comentários</span>
                                 </div>
                                 <div class="footer-comments-section">
                                     <div class="footer-comment-section">
                                         <ul>
-                                            <li><span class="footer-comment-name">bad.vibes.memes</span> <span class="footer-comment">Vi tudo em um dia só 😅😅😅</span></li>
+                                            <li><span class="footer-comment-name">Loki.Oficial</span> <span class="footer-comment">Criaturas adoraveis</span></li>
                                         </ul>
                                         <ion-icon class="footer-comment-icon" name="heart-outline"></ion-icon>
                                     </div>
                                     <div class="footer-comment-section mt6">
                                         <ul>
-                                            <li><span class="footer-comment-name">adorable_animals</span> <span class="footer-comment">👏👏👏</span></li>
+                                            <li><span class="footer-comment-name">Rocket</span> <span class="footer-comment">lov u</span></li>
                                         </ul>
                                         <ion-icon class="footer-comment-icon" name="heart-outline"></ion-icon>
                                     </div>
