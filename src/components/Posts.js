@@ -20,7 +20,7 @@ export default function Posts() {
             postContent: "Guardioes",
             footerLikeImg: "2",
             footerLikeName: "Rocket",
-            footerLikeNumber: "168",
+            footerLikeNumber: '168',
             footerCommentProfile: "Sim"
         },
         {
@@ -30,7 +30,7 @@ export default function Posts() {
             postContent: "tony",
             footerLikeImg: "badvibes",
             footerLikeName: "bad.vibes.memes",
-            footerLikeNumber: "12568",
+            footerLikeNumber: '125,68',
             footerCommentProfile: "Não"
         },
         {
@@ -40,7 +40,7 @@ export default function Posts() {
             postContent: "Guardioes",
             footerLikeImg: "2",
             footerLikeName: "Rocket",
-            footerLikeNumber: "120.568",
+            footerLikeNumber: '12',
             footerCommentProfile: "Não"
         },
         {
@@ -50,7 +50,7 @@ export default function Posts() {
             postContent: "Guardioes",
             footerLikeImg: "2",
             footerLikeName: "Rocket",
-            footerLikeNumber: "120568",
+            footerLikeNumber: "199",
             footerCommentProfile: "Não"
         },
     ];
@@ -70,7 +70,7 @@ function CardPost(props) {
 
     const [salvar, setSalvar] = React.useState("bookmark-outline")
     const [like, setLike] = React.useState("heart-outline")
-    const [curtidas, setLikes] = React.useState(props.footerLikeNumber)
+    const [curtidas, setLikes] = React.useState(parseFloat(props.footerLikeNumber))
 
     return (
         <>

@@ -199,9 +199,14 @@ body {
     margin-left: 18.12px;
 }
 
-[name="bookmark-outline"] {
+[name="bookmark-outline"], [name="bookmark"] {
     margin-left: auto;
     margin-right: 17.63px;
+}
+
+[name="bookmark"]
+{
+    color: #262626;
 }
 
 .curtidas {
