@@ -9,7 +9,7 @@ Neste mini projeto vocês devem transformar o projeto entregue num projeto React
 # Requisitos
 
 - Layout
-    - [ ]  O layout é quase o mesmo do Instagram que vocês fizeram no início do curso! A única diferença é o ícone de lápis após o nome da pessoa dona do perfil, como visto abaixo:
+    - [x]  O layout é quase o mesmo do Instagram que vocês fizeram no início do curso! A única diferença é o ícone de lápis após o nome da pessoa dona do perfil, como visto abaixo:
     - [x]  Você pode utilizar o seu próprio código do Instagram para iniciar o projeto ou utilizar o que nós fornecemos no fim desse enunciado 😃
     
 - CSS e Imagens
@@ -31,33 +31,6 @@ Neste mini projeto vocês devem transformar o projeto entregue num projeto React
         - Os posts (deve ter pelo menos 2 posts)
         - As sugestões de seguidores (deve ter pelo menos 2 sugestões)
         - O usuário acima das sugestões (este não é um array, mas os dados devem vir de props)
-        - Exemplo
-            - Em vez de:
-                ```jsx
-                export default function Lista() {
-                	return (
-                		<ul>
-                			<li>Item 1</li>
-                			<li>Item 2</li>
-                			<li>Item 3</li>
-                		</ul>
-                	);
-                }
-                ```
-                
-            - Você deve seguir a abordagem de:
-                
-                ```jsx
-                export default function Lista() {
-                	const itens = ["Item 1", "Item 2", "Item 3"]
-                
-                	return (
-                		<ul>
-                			{itens.map((item) => <li>{item}</li>)}
-                		</ul>
-                	)
-                }
-                ```
                 
 - Dados Dinâmicos
     - [ ]  O projeto também deverá ter alguns dados dinâmicos que irão mudar na tela. São eles:
@@ -70,16 +43,5 @@ Neste mini projeto vocês devem transformar o projeto entregue num projeto React
             - Ao clicar na imagem de um post do feed, o usuário poderá curtir a postagem, ou seja, o botão do like deverá ficar preenchido em vermelho
                 - OBS: assim como no Instagram real, clicar na imagem **NÃO** retira likes, apenas adiciona caso já não tenha
             - O número de likes deverá aumentar quando a pessoa der um like e diminuir quando retirá-lo.
-    
-    Para que a correção automática de projetos consiga avaliar seu projeto, é necessário adicionar os atributos indicados no Figma abaixo
-    
-    [Projeto Instagram - Seletores](https://www.figma.com/file/dUxw35wv9mYPxQoxSByO0j/Projeto-Instagram---Seletores?node-id=0%3A1)
-    
-    ⚠️ **Atenção:** Caso você tenha componentizado os elementos, **NÃO** coloque o `data-test` nas tags dos componentes React e sim **nas tags HTML**. Exemplo:
-    
-    ```jsx
-    ERRADO: <MeuLindoBotaoComponentizado data-test="blabla" />
-    CERTO: <button data-test="blabla" />
-    ```
     
     🤔 **Por quê?** Porque atributos colocados nas tags dos componentes não são inseridos no HTML final gerado pelo React, somente atributos explicitamente colocados nas tags HTML.

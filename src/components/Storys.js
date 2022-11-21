@@ -44,7 +44,7 @@ export default function Storys() {
     ]
 
     const storysReder = stories.map((story) => { return <Story alt={story.alt} src={story.src} name={story.name} /> })
-    
+
     return (
         <div class="storys">
             {storysReder}
@@ -60,7 +60,7 @@ function Story(props) {
     return (
       <div class="story">
         <div class="img-story">                 
-          <img  src={props.src} alt={props.alt} />
+          <img src={props.src} alt={props.alt} />
         </div>
         <p>{props.name}</p>
       </div>

@@ -1,11 +1,42 @@
 export default function Sidebar() {
+
+    const sugestions = [
+        {
+            src: "./assets/Hella.jpg",
+            title: "Hella"
+        },
+        {
+            src: "./assets/thanos.jpg",
+            title: "Thanos"
+        },
+        {
+            src: "./assets/venon.jpg",
+            title: "Venon"
+        },
+        {
+            src: "./assets/ego.jpg",
+            title: "Ego"
+        },
+        {
+            src: "./assets/gor.jpg",
+            title: "Gor"
+        }
+    ];
+
+    const sugestionsRender = sugestions.map((sugestion) => {
+        return <Sugestion src={sugestion.src} title={sugestion.title} />
+    });
+
     return (
         <div class="sidebar">
-            <div class="profile">
-                <img src="assets/loki.jpg" />
+            <div data-test="user" class="profile">
+                <img data-test="profile-image" src="assets/loki.jpg" />
                 <div class="info">
                     <b>Sylvie</b>
-                    <p>Loki_Sylvie</p>
+                    <div class="row">
+                        <p data-test="name" >Loki_Sylvie</p>
+                        <ion-icon data-test="edit-name" name="pencil-outline"></ion-icon>
+                    </div>
                 </div>
             </div>
             <br />
@@ -14,46 +45,9 @@ export default function Sidebar() {
                     <p>Sugestões para você</p>
                     <b>Ver tudo</b>
                 </div>
-                <div class="sugestion">
-                    <img src="assets/Hella.jpg" />
-                    <div class="info">
-                        <b>Hella</b>
-                        <p>Segue você</p>
-                    </div>
-                    <p class="seguir">seguir</p>
-                </div>
-                <div class="sugestion">
-                    <img src="assets/thanos.jpg" />
-                    <div class="info">
-                        <b>Thanos</b>
-                        <p>Segue você</p>
-                    </div>
-                    <p class="seguir">seguir</p>
-                </div>
-                <div class="sugestion">
-                    <img src="assets/venon.jpg" />
-                    <div class="info">
-                        <b>Venon</b>
-                        <p>Segue você</p>
-                    </div>
-                    <p class="seguir">seguir</p>
-                </div>
-                <div class="sugestion">
-                    <img src="assets/ego.jpg" />
-                    <div class="info">
-                        <b>Ego</b>
-                        <p>Segue você</p>
-                    </div>
-                    <p class="seguir">seguir</p>
-                </div>
-                <div class="sugestion">
-                    <img src="assets/gor.jpg" />
-                    <div class="info">
-                        <b>Gor</b>
-                        <p>Segue você</p>
-                    </div>
-                    <p class="seguir">seguir</p>
-                </div>
+                <>
+                    {sugestionsRender}
+                </>
             </div>
             <div class="about">
                 <p>Sobre · Ajuda · API · Carreiras · Privacidade ·</p>
@@ -64,4 +58,18 @@ export default function Sidebar() {
             </div>
         </div>
     )
+}
+
+
+function Sugestion(props) {
+    return (
+        <div class="sugestion">
+            <img alt="" src={props.src} />
+            <div class="info">
+                <b>{props.title}</b>
+                <p>Segue você</p>
+            </div>
+            <p class="seguir">seguir</p>
+        </div>
+    );
 }

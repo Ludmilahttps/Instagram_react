@@ -1,5 +1,4 @@
-body
-{
+body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #fafafa;
     display: flex;
@@ -7,15 +6,16 @@ body
     align-items: center;
 }
 
-.aux
-{
+.aux {
+    display: flex;
     width: 100%;
     height: 100%;
+    justify-content: center;
 }
 
 /*Inicio TOP BAR*/
-.top-bar 
-{
+
+.top-bar {
     background-color: white;
     position: fixed;
     height: 54px;
@@ -23,245 +23,220 @@ body
     margin-top: 0px;
     padding: 5px;
     box-sizing: border-box;
-    display:flex;
+    display: flex;
     align-items: center;
     border: 1px solid #dbdbdb;
     z-index: 2;
-}
-
-.top-bar
-{
     border-left: none;
     border-right: none;
 }
 
-.logo-instagram
-{
+.logo-instagram {
     display: flex;
     margin: auto;
 }
 
-.top-bar ion-icon 
-{
+.top-bar ion-icon {
     height: 20px;
     width: 20px;
     cursor: pointer;
 }
 
-[name="compass-outline"], [name="heart-outline"],[name="person-outline"]
-{
+[name="compass-outline"], [name="heart-outline"], [name="person-outline"] {
     display: none;
 }
 
-.top-bar input
-{
+.top-bar input {
     display: none;
 }
+
 /*Final TOP BAR*/
 
 /*Inicio FEED*/
-.posts p
-{
+.posts p {
     size: 14px;
     font-weight: 300;
 }
-.posts b
-{
+
+.posts b {
     size: 14px;
     font-weight: 500;
 }
-.container
-{
+
+.container {
     width: 100%;
 }
-.feed
-{
+
+.feed {
     margin-top: 54px;
     width: 100%;
 }
-    /*Inicio STORYS*/
-    .storys
-    {
-        height: 118px;
-        position: relative;
-        display:flex;
-        justify-content: flex-start;
-        align-items: center;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        padding-left: 12px;
-        border-radius: 3px;
-    }
 
-    .story
-    {
-        height: 78px;
-        width: 66px;
-        text-align: center;
-        font-size:12px;
-        padding: 0 6px;
-    }
+/*Inicio STORYS*/
+.storys {
+    height: 118px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-left: 12px;
+    border-radius: 3px;
+}
 
-    .img-story
-    {
-        background-image: url("icons/stories_background.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 100%;
-        border-radius: 100%;
-        cursor: pointer;
-    }
+.story {
+    height: 78px;
+    width: 66px;
+    text-align: center;
+    font-size: 12px;
+    padding: 0 6px;
+}
 
-    .img-story img
-    {
-        height: 56px;
-        width: 56px;
-        margin: 5px;
-        border-radius: 100px;
-    }
-    .forward ion-icon
-    {
-        display:none;
-    }
-    /*Final STORYS*/
+.img-story {
+    background-image: url("icons/stories_background.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: 100%;
+    cursor: pointer;
+}
 
-    /*Inicio POSTS*/
-    .posts
-    {
-        display:flex;
-        flex-direction: column;
-        margin-bottom: 1px;
-        border-radius: 3px;
-    }
+.img-story img {
+    height: 56px;
+    width: 56px;
+    margin: 5px;
+    border-radius: 100px;
+}
 
-        .up-post
-        {
-            background-color: white;
-            height: 61px;
-            display: flex;
-            
-        }
-
-        .img-profile img
-        {
-            height: 32px;
-            width: 32px;
-            margin-top: 15px;
-            margin-left: 17px;
-            border-radius: 100px;
-        }
-
-        .up-post b
-        {
-            margin-top: 21px;
-            margin-left: 15px;
-        }
-
-        [name="ellipsis-horizontal"]
-        {
-            margin-top: 23px;
-            margin-left: auto;
-            margin-right: 16.5px;
-        }
-
-    .post, .post-final
-    {
-        border: 1px solid #dbdbdb;
-        background-color: black;
-        display: flex;
-        flex-direction: column;
-        border-radius: 3px;
-    }
-
-    .img-post img
-    {
-        width:100%;
-        margin-bottom: -3px;
-    }
-
-        .down-post
-        {
-            background-color: white;
-            height: 76px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-sizing: border-box;
-        }
-
-        .icons-post
-        {
-            display: flex;
-            margin-top: 12px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-
-            .icons-post ion-icon 
-            {
-                height: 17.88px;
-                cursor: pointer;
-            }
-            .icons-post [name="heart-outline"]
-            {
-                display: flex;
-                margin-left: 17.81px;
-            }
-            [name="chatbubble-outline"]
-            {
-                margin-left: 17.81px;
-            }
-            [name="paper-plane-outline"]
-            {
-                margin-left: 18.12px;
-            }
-            [name="bookmark-outline"]
-            {
-                margin-left: auto;
-                margin-right: 17.63px;
-            }
-
-        .curtidas
-        {
-            display: flex;
-            margin-bottom: 14px;
-            margin-left: 17px;
-            box-sizing: border-box;
-        }
-
-        .curtidas p
-        {
-            margin-top: 3px
-        }
-
-        .img-like img
-        {
-            height: 20px;
-            width: 20px;
-            margin-right: 5px;
-            border-radius: 100%;
-        }
-
-    .middle
-    {
-        height: 60px;
-    }
-    .post-final
-    {
-        height: 160px;
-        display:flex;
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
-    /*Final POSTS*/
-/*Final FEED*/
-.sidebar
-{
+.forward ion-icon {
     display: none;
 }
+
+/*Final STORYS*/
+
+/*Inicio POSTS*/
+.posts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1px;
+    border-radius: 3px;
+}
+
+.up-post {
+    background-color: white;
+    height: 61px;
+    display: flex;
+
+}
+
+.img-profile img {
+    height: 32px;
+    width: 32px;
+    margin-top: 15px;
+    margin-left: 17px;
+    border-radius: 100px;
+}
+
+.up-post b {
+    margin-top: 21px;
+    margin-left: 15px;
+}
+
+[name="ellipsis-horizontal"] {
+    margin-top: 23px;
+    margin-left: auto;
+    margin-right: 16.5px;
+}
+
+.post, .post-final {
+    border: 1px solid #dbdbdb;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+}
+
+.img-post img {
+    width: 100%;
+    margin-bottom: -3px;
+}
+
+.down-post {
+    background-color: white;
+    height: 76px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.icons-post {
+    display: flex;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.icons-post ion-icon {
+    height: 17.88px;
+    cursor: pointer;
+}
+
+.icons-post [name="heart-outline"] {
+    display: flex;
+    margin-left: 17.81px;
+}
+
+[name="chatbubble-outline"] {
+    margin-left: 17.81px;
+}
+
+[name="paper-plane-outline"] {
+    margin-left: 18.12px;
+}
+
+[name="bookmark-outline"] {
+    margin-left: auto;
+    margin-right: 17.63px;
+}
+
+.curtidas {
+    display: flex;
+    margin-bottom: 14px;
+    margin-left: 17px;
+    box-sizing: border-box;
+}
+
+.curtidas p {
+    margin-top: 3px
+}
+
+.img-like img {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    border-radius: 100%;
+}
+
+.middle {
+    height: 60px;
+}
+
+.post-final {
+    height: 160px;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/*Final POSTS*/
+/*Final FEED*/
+.sidebar {
+    display: none;
+}
+
 /*Inicio BOTTOM-BAR*/
-.bottom-bar
-{
+.bottom-bar {
     background-color: white;
     border: 1px solid #dbdbdb;
     height: 54px;
@@ -270,264 +245,362 @@ body
     bottom: 0;
     position: fixed;
     box-sizing: border-box;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 2;
 }
 
-.bottom-bar [name="person-outline"]
-{
+.bottom-bar [name="person-outline"] {
     display: flex;
 }
-.bottom-bar [name="heart-outline"]
-{
+
+.bottom-bar [name="heart-outline"] {
     display: flex;
 }
-.bottom-bar ion-icon 
-{
+
+.bottom-bar ion-icon {
     height: 20px;
     width: 20px;
     cursor: pointer;
 }
+
 /*Final BOTTOM-BAR*/
 
 /*responsividade*/
 /* Desktop sem sidebar */
-@media all and (min-width: 614px) 
-{
-    .container
-    {
+@media all and (min-width: 614px) {
+    .container {
         display: flex;
         justify-content: center;
     }
-    .feed
-    {
-        width: 614px;  
+
+    .feed {
+        width: 614px;
         margin-top: 88px;
     }
-    .storys
-    {
+
+    .storys {
         background-color: white;
         border: 1px solid #dbdbdb;
     }
-      
-    .forward
-    {
+
+    .forward {
         display: flex;
         position: absolute;
         right: 8px;
         cursor: pointer;
     }
 
-    .forward ion-icon
-    {
+    .forward ion-icon {
         display: flex;
         height: 32px;
         width: 32px;
         fill: #ffffff;
         border-color: #ffffff;
         opacity: 0.98;
-        
+
     }
-        .line
-        {
-            border: 1px solid #dbdbdb; 
-            height: 22px;
-            width: 0.1px;
-            margin-left: 11.37px;
-            margin-right: 10px;
-        }
-        .logo-instagram
-        {
-            margin-left: 0px;
-        }
-        .top-bar ion-icon 
-        {
-            width: 40px;
-            cursor: pointer;
-    
-        }
-        
-        .searchbar
-        {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-        .searchbar input
-        {
-            display: flex;
-            background-color: #fafafa;
-            color: #dbdbdb;
-            border: solid 1px #dbdbdb;
-            border-radius: 4px;
-            width: 215px;
-            height: 25px;
-        }
-        .search::placeholder
-        {
-            text-align: center;
-        }
-        .top-bar [name="logo-cam"]
-        {
-            margin-left: 15px;
-        }
-        [name="paper-plane-outline"]
-        {
-            margin-right: 20px;
-        }
-        .top-bar [name="compass-outline"]
-        {
-            display: flex;
-            margin-right: 19px;
-        } 
-        .top-bar [name="heart-outline"]
-        {
-            display: flex;
-            margin-right: 19px;
-        }
-        .top-bar [name="person-outline"]
-        {
-            display: flex;
-            margin-right: 5px;
-        }
-    
-    .posts
-    {
+
+    .line {
+        border: 1px solid #dbdbdb;
+        height: 22px;
+        width: 0.1px;
+        margin-left: 11.37px;
+        margin-right: 10px;
+    }
+
+    .logo-instagram {
+        margin-left: 0px;
+    }
+
+    .top-bar ion-icon {
+        width: 40px;
+        cursor: pointer;
+
+    }
+
+    .searchbar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .searchbar input {
+        display: flex;
+        background-color: #fafafa;
+        color: #dbdbdb;
+        border: solid 1px #dbdbdb;
+        border-radius: 4px;
+        width: 215px;
+        height: 25px;
+    }
+
+    .search::placeholder {
+        text-align: center;
+    }
+
+    .top-bar [name="logo-cam"] {
+        margin-left: 15px;
+    }
+
+    [name="paper-plane-outline"] {
+        margin-right: 20px;
+    }
+
+    .top-bar [name="compass-outline"] {
+        display: flex;
+        margin-right: 19px;
+    }
+
+    .top-bar [name="heart-outline"] {
+        display: flex;
+        margin-right: 19px;
+    }
+
+    .top-bar [name="person-outline"] {
+        display: flex;
+        margin-right: 5px;
+    }
+
+    .posts {
         margin-top: 21px;
     }
 
-    .bottom-bar
-    {
+    .bottom-bar {
         display: none;
     }
 
-    .sidebar
-    {
-    display: none;
+    .sidebar {
+        display: none;
     }
-}
-/* Desktop */
-@media all and (min-width: 935px) 
-{
-    .top-bar
-    {
-        background-color: #8E8E8E;
+
+
+    /*Inicio Comentarios*/
+
+    .footer-add-comment {
+        width: 100%;
+    }
+    .footer-comment-profile {
+        display: flex;
         justify-content: center;
     }
-    .top-bar .top-bar
-    {
+    .comment-content {
+        width: 578px;
+        margin-bottom: 18px;
+    }
+    .footer-comment-name {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0em;
+        color: #262626;
+    }
+    .footer-comment-name:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .footer-comment {
+        font-size: 14px;
+    }
+    .footer-comments-section {
+        margin-top: 6px;
+    }
+    .footer-comment-section {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-comment-icon {
+        font-size: 14px;
+    }
+    .footer-comment-icon:hover {
+        color: gray;
+    }
+    .see-all-comments {
+        font-size: 14px;
+        color: #97938f;
+        cursor: pointer;
+    }
+    .post-time {
+        font-size: 10px;
+        color: #97938f;
+    }
+    .card-post .card-post-footer .divider {
+        height: 1px;
+        background-color: #EFEFEF;
+        margin-bottom: 10px;
+    }
+    .send-comment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .send-comment-form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 578px;
+    }
+    icon-happy {
+        font-size: 28px;
+        cursor: pointer;
+    }
+    .input-comment {
+        width: 450px;
+        font-size: 14px;
+        border: none;
+    }
+    .input-comment:focus {
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
+    .btn {
+        background-color: transparent;
+        border: none;
+        font-weight: bold;
+        color: #B2DFFC;
+        font-size: 14px;
+    }
+    .btn:hover {
+        color: #0095F6;
+        transition-delay: 300ms;
+    }
+    .mt6 {
+        margin-top: 6px;
+    }
+    .mt10 {
+        margin-top: 10px;
+    }
+    .mb {
+        margin-bottom: 250px;
+    }
+
+    /*Final Comentarios*/
+
+}
+
+/* Desktop */
+@media all and (min-width: 935px) {
+    .top-bar {
+        justify-content: center;
+    }
+
+    .top-bar .top-bar {
         width: 935px;
         border-left: none;
         border-right: none;
     }
-   .sidebar
-   {
-    display: flex;
-    flex-direction: column;
-    width: 293px;
-    margin-top: 114px;
-    margin-left: 29px;
-   }
-   .sidebar img 
-   {
-    border-radius: 100%;
-   }
-   .profile
-   {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-   }
-   .profile img 
-   {
-    width: 56px;
-    margin-right: 17px;
-   }
-   .info
-   {
-    display: flex;
-    flex-direction: column;
-    margin-left: -40px;
-   }
-   .profile .info
-   {
-    margin-left: 0px;
-   }
-   .profile .info b
-   {
-    font-weight: 500;
-   }
-   .profile .info p
-   {
-    font-weight: 300;
-   }
-   .see-all
-   {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 18px;
-   }
-   .sugestion
-   {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 16px;
-   }
-   .sugestion img 
-   {
-    width: 32px;
-    margin-right: -100px;
-   }
-   .see-all p
-   {
-    font-size: 12px;
-    font-weight: 500;
-    color: #8E8E8E;
-   }
-   .see-all b
-   {
-    font-size: 12px;
-    font-weight: 500;
-    color: #262626;
-   }
-   .sugestion b
-   {
-    font-weight: 500;
-    font-size: 14px;
-    color: #262626;
-   }
-   .sugestion p
-   {
-    font-weight: 400;
-    font-size: 12px;
-    color: #8E8E8E
-   }
-   .sugestion .seguir
-   {
-    font-weight: 500;
-    font-size: 12px;
-    color: #139ef2;
-   }
-   .sugestions
-   {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-bottom: 10px;
-   }
-   .about
-   {
-    font-weight: 400;
-    font-size: 11px;
-    color: #c7c7c7;
-   }
-   .container
-   {
-    display: flex;
-    flex-direction: row;
-   }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        width: 293px;
+        margin-top: 114px;
+        margin-left: 29px;
+    }
+
+    .sidebar img {
+        border-radius: 100%;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .profile img {
+        width: 56px;
+        margin-right: 17px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+    }
+
+    .profile .info {
+        margin-left: 0px;
+    }
+
+    .profile .info b {
+        font-weight: 500;
+    }
+
+    .profile .info p {
+        font-weight: 300;
+    }
+
+    .see-all {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 18px;
+    }
+
+    .sugestion {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+
+    .sugestion img {
+        width: 32px;
+        margin-right: -100px;
+    }
+
+    .see-all p {
+        font-size: 12px;
+        font-weight: 500;
+        color: #8E8E8E;
+    }
+
+    .see-all b {
+        font-size: 12px;
+        font-weight: 500;
+        color: #262626;
+    }
+
+    .sugestion b {
+        font-weight: 500;
+        font-size: 14px;
+        color: #262626;
+    }
+
+    .sugestion p {
+        font-weight: 400;
+        font-size: 12px;
+        color: #8E8E8E
+    }
+
+    .sugestion .seguir {
+        font-weight: 500;
+        font-size: 12px;
+        color: #139ef2;
+    }
+
+    .sugestions {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+
+    .about {
+        font-weight: 400;
+        font-size: 11px;
+        color: #c7c7c7;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .row {
+        display: flex;
+    }
 
 }

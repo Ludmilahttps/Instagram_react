@@ -4,7 +4,7 @@ export default function Topbar() {
             <div class="top-bar">
                 <ion-icon name="logo-instagram"></ion-icon>
                 <div class="line"> </div>
-                <img class="logo-instagram" src={"./icons/logo.png"}/>
+                <img class="logo-instagram" src="icons/logo.png" />
                 <div class="searchbar">
                     <input type="text" class="search" id="search" placeholder="search" />
                 </div>
