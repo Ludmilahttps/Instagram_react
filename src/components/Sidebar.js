@@ -1,4 +1,10 @@
+import React, { useState } from "react"
+
 export default function Sidebar() {
+
+    const imagemPadrao = "./assets/loki.jpg"
+    const [nome, setNome] = useState("")
+    const [imagem, setImagem] = useState(imagemPadrao)
 
     const sugestions = [
         {
@@ -21,21 +27,30 @@ export default function Sidebar() {
             src: "./assets/gor.jpg",
             title: "Gor"
         }
-    ];
+    ]
+
+    function inserirNome() {
+        setNome(prompt("Qual é o seu nome?"))
+    }
+
+    function inserirImagem() {
+        const imagemAdicionada = prompt("Escolha o link da sua imagem")
+        setImagem(imagemAdicionada)
+    } 
 
     const sugestionsRender = sugestions.map((sugestion) => {
         return <Sugestion src={sugestion.src} title={sugestion.title} />
-    });
+    })
 
     return (
         <div class="sidebar">
             <div data-test="user" class="profile">
-                <img data-test="profile-image" src="assets/loki.jpg" />
+                <img data-test="profile-image" onClick={inserirImagem} src={!imagem ? imagemPadrao : imagem} />
                 <div class="info">
                     <b>Sylvie</b>
                     <div class="row">
-                        <p data-test="name" >Loki_Sylvie</p>
-                        <ion-icon data-test="edit-name" name="pencil-outline"></ion-icon>
+                        <p data-test="name" >{!nome ? "Loki_Sylvie" : `${nome}`}</p>
+                        <ion-icon data-test="edit-name" onClick={inserirNome} name="pencil-outline"></ion-icon>
                     </div>
                 </div>
             </div>

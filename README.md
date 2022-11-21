@@ -34,9 +34,9 @@ Neste mini projeto vocês devem transformar o projeto entregue num projeto React
                 
 - Dados Dinâmicos
     - [ ]  O projeto também deverá ter alguns dados dinâmicos que irão mudar na tela. São eles:
-        - [ ]  Nome de usuário (ao apertar o lápis, aparece um prompt para alterá-lo)
+        - [x]  Nome de usuário (ao apertar o lápis, aparece um prompt para alterá-lo)
             - O texto que deve ser mudado é apenas o que aparece ao lado do lápis!   
-        - [ ]  Imagem de perfil (ao clicar uma vez na imagem, aparece um prompt pedindo novo link)
+        - [x]  Imagem de perfil (ao clicar uma vez na imagem, aparece um prompt pedindo novo link)
         - [ ]  Salvar o post (ao clicar no ícone de salvar o post, ele deverá ficar preenchido)
         - [ ]  Like no post
             - Ao clicar no ícone do like o usuário poderá curtir a postagem, caso a postagem já esteja curtida ao clicar no ícone a postagem não deve ficar curtida.

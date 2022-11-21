@@ -1,5 +1,7 @@
-export default function Posts() {
+import React from 'react'
 
+export default function Posts() {
+    
     const posts = [
         {
             name: "Loki.Oficial",
@@ -55,16 +57,19 @@ export default function Posts() {
 
     const postsRender = posts.map((post) => {
         return <CardPost class={post.class} logo={post.logo} name={post.name} postContent={post.postContent} footerLikeImg={post.footerLikeImg} footerLikeName={post.footerLikeName} footerLikeNumber={post.footerLikeNumber} footerCommentProfile={post.footerCommentProfile} />
-    });
+    })
 
     return (
         <div class="posts">
             {postsRender}
         </div>
-    );
+    )
 }
 
 function CardPost(props) {
+
+    const [salvar, setSalvar] = React.useState("bookmark-outline")
+
     return (
         <>
             <div data-test="post" class={`card-post ${props.class}`}>
@@ -96,7 +101,7 @@ function CardPost(props) {
                         <ion-icon data-test="like-post" name="heart-outline"></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
-                        <ion-icon data-test="save-post" name="bookmark-outline"></ion-icon>
+                        <ion-icon data-test="save-post" onClick={() => salvar === "bookmark-outline" ? setSalvar("bookmark") : setSalvar("bookmark-outline")} name={salvar}></ion-icon>
                     </div>
                     <div class="curtidas">
                         <div class="img-like">

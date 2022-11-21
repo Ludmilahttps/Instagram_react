@@ -199,6 +199,10 @@ body {
     margin-left: auto;
     margin-right: 17.63px;
 }
+[name="bookmark"] {
+    margin-left: auto;
+    margin-right: 17.63px;
+}
 
 .curtidas {
     display: flex;
